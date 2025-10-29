@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metaverse Food – Cravings without the Damage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+
+    p, li {
+      font-weight: 400;
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: #76b7b2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+    }
+
+    header.hero h1 {
+      font-size: 2.5rem;
+    }
+
+    header.hero p {
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0.5rem auto 0;
+    }
+
+    @media (min-width: 600px) {
+      header.hero h1 {
+        font-size: 3rem;
+      }
+
+      header.hero p {
+        font-size: 1.25rem;
+      }
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .stat-card {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+
+    .stat-card span {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .chart-container {
+      position: relative;
+      margin: 2rem auto;
+      max-width: 720px;
+      height: 420px;
+    }
+
+    .chart-container canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .chart-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+
+    .coming-soon {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .coming-left,
+    .coming-right {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .coming-left img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .coming-right h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .coming-right ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+    }
+
+    .coming-right li {
+      margin: 0.5rem 0;
+    }
+
+    #contact p {
+      margin: 0.25rem 0;
+    }
+
+    #contact a {
+      color: #59a14f;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    #sources {
+      font-size: 0.85rem;
+      color: #aaa;
+      padding: 1rem 2rem 3rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    #sources h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #ddd;
+    }
+
+    #sources ol {
+      padding-left: 1.5rem;
+    }
+
+    #sources li {
+      margin: 0.5rem 0;
+      line-height: 1.4;
+    }
+
+    #sources li a {
+      color: #aaa;
+      text-decoration: underline;
+    }
+
+    #sources li a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Cravings without the damage.</h1>
+    <p>Metaverse Food offers a guilt-free, immersive food experience – satisfy your cravings virtually while building healthier eating habits in real life.</p>
+  </header>
+
+  <section id="stats">
+    <h2>Key Health &amp; Nutrition Stats</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <strong>7.94M</strong>
+        <span>diet-related deaths/yr <sup><a href="#source1">[1]</a></sup></span>
+      </div>
+      <div class="stat-card">
+        <strong>589M</strong>
+        <span>adults with diabetes <sup><a href="#source2">[2]</a></sup></span>
+      </div>
+      <div class="stat-card">
+        <strong>1.4B</strong>
+        <span>adults with hypertension <sup><a href="#source3">[3]</a></sup></span>
+      </div>
+      <div class="stat-card">
+        <strong>673M</strong>
+        <span>people facing hunger (2024) <sup><a href="#source4">[4]</a></sup></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="chart">
+    <h2>Comparative Impact</h2>
+    <div class="chart-container">
+      <canvas id="healthChart" aria-label="Chart comparing global health metrics" role="img"></canvas>
+    </div>
+    <p class="chart-note">
+      Values shown on a logarithmic scale for comparability. See data sources <sup><a href="#source1">[1]</a>, <a href="#source2">[2]</a>, <a href="#source3">[3]</a>, <a href="#source4">[4]</a>, <a href="#source5">[5]</a></sup>.
+    </p>
+  </section>
+
+  <section class="coming-soon">
+    <div class="coming-left">
+      <img src="data:image/png;base64,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U356le/ym9/+9uZNm1aPvaxj0sXF+e9733PSy+9tNQZI0aMqLe3NwMGDShqair777rv8x3/8B8OGDYvakSNGZPbsmTt37qxevTrPPPOMfOQjH2lra8uFF16YfffdlzZt2ogRI1KcnJxcccUVmT59er766qty5513ZtCgQZk4cWKefPLJvOUtb8nU1FSWLl1a8+bN2xlvrS4uTtdee22efvppw+FQqampyR/84AebMmVKbm5vT1NRkZ2ezdevWZGdnJ729vUmS9PX15c0332zWrl3LhAkT8uEPf5idTkdHR+vXr1/8+7/+K3PmzMn06dNz0kknZfjw4TTfemH//mfzk5/8JD179mxqa2vT0dGRv/zlL+nt7Zl165ZWVFTooIMOyC233JLKysq0tbWlq6uLo446KlOnTqVfv36efPLJvPrVr8ull15KY2Mj5s+fT3t7e2bMmKGnp6eWLFmS888/P+PGjZMk/fr1PPnkkznooIPyvve9L3Xq1JHj8Y53vCFOPvnk/OQnP8moUaOyb9++HBwcrNVqNWnSpPz2t7+dr7/++rRNnz7d8PBwdO7cOd/61rcav/71r+XGG29kr732yrx27dpk165d6enpMnbsWPHhhx9m8ODBnH/++Rk4cGDGjBlTUFBARETEpZdemnPOOSf7+/uXLl+etrc3iY6OZu+995Z+/fp86lOfyuzZs+fca5MmTZpjjjkmmzdvTmJiYpIkg/nTp0/Oxz/+sYwdOzZz5szJsmVLfvCDH8To0aPz5je/2aRJk/KFL3wh17721Zqamry6quv5pprrmnhwoV5+ctfJkmampr87Gc/yzZt2jS+853vZHPmzJg9e3Z+8Ytf5PXXX8+qVauykUceyWmnnZaVK1eumIyMjCye1OHDh/PSSy/NbrvtkuHDh6fZ2VnFxcU5c+YM8+eSTeuihh/J3f/M3761//Ws8991ySZKYvX17nnXde3nzzzRk1aFB+9KMfJPnz5+fSSy/N5MmT85Of/CRJMmDAgAwYMICTJ0/Wrl0bmzdvzgMPPJBkZWU57rjj0tbWFtOmTZt8+eWX5+STT85f//Vfdeedd2bBhAkvX748OzYsUfr06TP55JNzyy67ZNasWYvl5eU5c+ZM7Lfffvm4ceMydOjQfOITn8ivfvWr+eEPf5hjjjkmiYmJ+eY3v5nll18+5s+fn9LSUk888UQmTJiQb37zm/nKXv0ikpKTMm7cOOrVq5f+/Oc/5+tfn3/84x+zZMmS7Lvvvsu1115b1rC5c+fm0ksvzYIFC7J58+Y8/PDDmDt3LnvssUe+fft2fvrTn05tbW1qbm5OSktLkyT59re/Keutt5bzzjvP6aefnsceeyy9vb3p7u4mPT09atmyZZk4cWKioqJMq1at8uY3v5nvfve7OfXUU3PWWWflX//1X6WnpydPPvnkHHnkkUmS0dHR/OEf/gAVV1wROjo6vPrqq2nTpo3MnTs3DzzwQJramtLFF1/c4N998MMPx5IlS/L888/nN7/5TZKkF198sWHDhvnyl7+chQsX5pprrsnl5eX8zGc+cx122KE8+OCDc+ONN+auu+6axYsX56KOPzp133plLL720dLmtXr26bGho8q1vfSsXXHBBHnrooTnkkEPy6aefLoceeijPP/987LzzzvnUpz7V+eefn+KiopycnJSUlJeeSRR/LFL35x9913z69+9au56KKL8u677+b3v/99enp6cnJy8owzzthfTzzxxBx55JF5+OGH8+1vf9uJfi9evDh79uxcfvnlueyyy/LjH/94Lrvsslx33XX57ne/yzPPPJOrr7667LTTjtl3bp1ufjii3P11Vdn6dKlGTFiRL7+9a/ntttuS9OmTZk4cWKatWvXZunSpRk5cmTbbrvN2rVrM3fu3CTJ/Oc//8lJJ510UlVVVay++ebs27eP008/PZdeeikzZ86st956a9/5zndGvWfOnMnAgQMzY8aMoVRqWbr06JEk6dKl2WuvvSZJUlNTk5//+Z/lc5/7XM4888x86EMfyj333JPq6mq+9rWvZc2aNXn77bdz00035fbbb8/Wvf81f/exn+eQnP5njxo3L448/niuuuCIvfvGLPPPMM5k0aVJ+9KMfjS9+8Ys5+eSTkyQ9PT1ZsGABDz74YJLkySefyM9+9rMJkuy22245/fr1efLJJzN06FDmzJkzSfLEEy/kta99LUly5ZVX5t/+7d/m9a9/mZ/+9KcjIyP55Cc/yR577JG8vb1dZGSkfOELX8jzzz+f9evXM3ny5Bx99FGeffbZPPfcc/nxj3+cz372s7nwwgvz//7v/2v4n//5n+c973nPntf0d3dnc+fOzZo1K9ttt12Wlpa8//vfn+bMmXP77LPPunXrFuPGjctHP/rR+eQnP8kkk0yS3XbbbQwePDhPP/30zJ8/P8OGDSsyMhKPPfZYfOITn8hmzZqVlltuSbNmzYrDw8P89Kc/nVtvvZXTTz99pkyZUr7zne9I/Pnz08SJE7N//36HDh3KbbfdljvvvDO/+tWv8q53vSs5OTkZHR1NrVu3btG8efPS09OTtra2OHTsWffbZZ0mS0Wi0Lrzwwnz5y1/OsmXLcv/++y9NmDAhJk+eXJMnT07Xr18/Hn300Yk2bdpUUlJS4uHhYdl1110TGRkZHD9+XMiUKdKFCxfm2muvzYABA/jxj3/KySefzLPPPpt77rlHc4vLy8v86le/yi9+8Yt59dVXkyQB+++/Po888kiWLl2aiIgISZKioqKIjY2VefPm5e67787xxx+fY445Jk444YQkyaRJkyQ9PT1ZsGBBBg0apJ133jnKlCkTe+21V+no6EiS5Jprrlk9e/b0rrvuEjfccIPWrFlTWltb09DQkG233TaZPXt2nHPNaWpqym9/+9u57bbbsoQTTsh1112XZcuW5Yc//GG+853v5O23385hwoQJ2W233Zaut9tqq63q2LFjNm3alFNOOaUUKiqKDDz44PvWpT+XIY489Npxzzjn59Kc/nRtvvJHttttu0rRp0zJp0qRVn/zJn9Tt2zdr165VWFgYli5dmsTERGR6ekpM2bMSGtra7NYLBYpKytz1lln5dJLL+XMM8/Mr33ta/nRj350N998M9dee22VlZWprq4uK1as0ObNm02y3XTTJEm9vb2cfvrpp3P22WeTJP369VNXV5cZM2Zk6dKliI+Pl+OOO65du3ZpwoQJGT16tGbMmJHh8XFlZ2fr3nvvbPLJJ3PRRRdlgQceyKuvvprAwECeeOKJ/OAHP0iSvOMd76hd77zn3HzzzZebNm2Ks7OzXHTRRVmxYkU5+eSTkyQ+Pv78/MaMGZOyZcs0NzcnTZs2tfmTz3zmMJMlUql8ff3v/7tZdddFHp6em0atVKf//3fyaJw+Gll14a5cuX55xzzslzzz2XO+64I66urj744ANJ0p07d+a6667L9OnTRwwYEFMnz49gwYNSV77ylfy1a9+N973vfaSmpqZ07NgR5ubmPPHEE7nvvvtKpVIp9fX1eeihh3LBBRfktVdeyXvvvZeZM2dO8/BHH51Ro0blwAMPzIknndTu/8Y3v5P3338+3vvWt6d///7s27ePY445Jm3atMmhQ4cyZcoUw8PDnHTSSUmSww8/nIqlUjk5Odltt91W9vZ2XnjhBVmzZk2SJPX19UmS0tPTufDCC3PjjTfmggUL8sa3vSm//etf06FDh2bKlCk5+eSTqytraWpqsmXL5vjjj8+//OUvJUm2bdumTZtWJk+eXJkzZ+aQQw6pZcuWVX5/Px/PqFGj0rx5cyYnJ2dz5szJrFmzWltbM+XKlUny8vI8/fTTedKJJ+ZPf/pT9PX15eDBg3P66afnq666aseOHXPJJZfkxhtvTNG/evXcfffddN9jR0dHSVL6+vrce++9qampSZLPPvtMtt122+To0aOzb968rFq1Knz961+np6dz7733Zt++fTnssMNyc3P5/e9/n+DBg/PUU09t83ngwIH54IMP5pprrlm+gw8+KDc3N5Ik2traXL58OWeccUamm26aT37yk3n66adHnYwYMUKS5OLFi+eqq65KktLS5Hnz5mXTpk3Lrl27vO51r8vy5cuzatWqTJcuXMivXr26efNm+vr64vjxo1Jkhx56KFMmTIlBQUFWr16dZ599tlMnz49li1blvPPP59DDz20QH6/t912W3V1dcmee+6avP7663P55Zfnv/7rv3L77bfn0Ucfnbnz5s3p6enJ6OgoFixYUCZMmFDlypV5+eWXM3ToUL7ykY+UnZ2dDBgwgI6Ozsnnzp2TiRMntH37drnsssvynW9+E9OnT8/UqVPS0dER73znO/T09GTMmDG5+OKLbSMX4dFHH51f/vKXefrpp1NbW5uVK1dmd3fHli1bkpOTkV/96lfl+eefr0cffTRp06apqalJv369Wr58uUkyX333ZeWlhrzuc99LoMHD17tT67YsCG33XbbfO5zn8vNN9+cq6++Okny8vL09vZmf/vSn+eAHPyhmzZqVvfffP8cdd1wOO+yw3HbbbUleXh72gw8+KP369ZPdunX56KOPzsyZM2fckYdHR/LFL35x3rx5+bGPf8xTTz01CQkJ1NVVde7cuZk8eXJeeOCB/Pqv/3rn+fwH/7wh5k1a1Yk6dKl6enpyR/+8IfcdddahQ4e2et/nzp2bQ4cOzZ8/Pwn98pe/nEMPPZTR0dFaW1vT0dGBxWsaHBzkhhtuyPPPP5/q6qqSZMPP/ywldXVBd/97nfzc5/97Do9HpeSkpJ85StfyWOPPZ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" alt="Metaverse Food prototype preview" />
+    </div>
+    <div class="coming-right">
+      <h2>Coming Soon</h2>
+      <ul>
+        <li>Personalized craving maps</li>
+        <li>Habit loops and weekly targets</li>
+        <li>Open API for nutrition partners</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:basil@gmail.com">basil@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919895088000">+91-9895*880**</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Metaverse Food. Prototype preview for concept validation.</p>
+  </footer>
+
+  <section id="sources">
+    <h2>Data Sources</h2>
+    <ol>
+      <li id="source1">The Lancet – Global Burden of Disease Study (2019), poor diets linked to ~7.94&nbsp;million deaths annually. <a href="https://www.eurekalert.org/news-releases/880414" target="_blank" rel="noopener">eurekalert.org</a></li>
+      <li id="source2">International Diabetes Federation, <em>IDF Diabetes Atlas</em> (11th ed., 2025): 589&nbsp;million adults living with diabetes. <a href="https://idf.org/aboutdiabetes/diabetes-facts-figures/" target="_blank" rel="noopener">idf.org</a></li>
+      <li id="source3">World Health Organization, <em>Global Report on Hypertension</em> (2025): ~1.4&nbsp;billion adults have high blood pressure. <a href="https://www.who.int/publications/i/item/9789240076450" target="_blank" rel="noopener">who.int</a></li>
+      <li id="source4">Food and Agriculture Organization of the United Nations, <em>State of Food Security and Nutrition in the World</em> 2025: 673&nbsp;million people facing hunger in 2024. <a href="https://www.fao.org/publications/sofi/en/" target="_blank" rel="noopener">fao.org</a></li>
+      <li id="source5">Our World in Data (IHME GBD 2021), protein-energy malnutrition causes ~0.2&nbsp;million deaths per year. <a href="https://ourworldindata.org/grapher/deaths-protein-energy-malnutrition" target="_blank" rel="noopener">ourworldindata.org</a></li>
+    </ol>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('healthChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Diet-related deaths/yr',
+          'Adults with diabetes',
+          'Adults with hypertension',
+          'People facing hunger (2024)',
+          'Deaths from malnutrition'
+        ],
+        datasets: [{
+          label: 'Global Health Metrics',
+          data: [7940000, 589000000, 1400000000, 673000000, 200000],
+          backgroundColor: ['#4e79a7', '#59a14f', '#f28e2b', '#e15759', '#76b7b2'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            type: 'logarithmic',
+            title: {
+              display: true,
+              text: 'Count (log scale)',
+              color: '#ddd'
+            },
+            ticks: {
+              color: '#ccc',
+              callback: (value) => {
+                const numeric = Number(value);
+                if (!Number.isFinite(numeric) || numeric === 0) {
+                  return value;
+                }
+                const absValue = Math.abs(numeric);
+                if (absValue >= 1e9) return (numeric / 1e9) + 'B';
+                if (absValue >= 1e6) return (numeric / 1e6) + 'M';
+                if (absValue >= 1e3) return (numeric / 1e3) + 'K';
+                return numeric;
+              }
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          x: {
+            ticks: { color: '#ccc' },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.05)'
+            }
+          }
+        },
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
