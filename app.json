@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Metaverse Food",
+    "slug": "metaverse-food",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#121212"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
